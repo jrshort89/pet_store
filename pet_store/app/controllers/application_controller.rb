@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
     def pet
         # byebug
         @pets = Pet.find_by(id: params[:id])
-        @age = "#{2020 - pet.year_of_birth.to_i}\n"
+        @age = 2020 - @pets.year_of_birth
         @home = @pets.good_with_kids? ? "Good with children" : "Prefers a home without children"
 
         render 'detail'

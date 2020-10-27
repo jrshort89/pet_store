@@ -1,5 +1,7 @@
 <h1>
 <%= "#{@pets.name} the #{@pets.species.capitalize}" %>
-<%= @age %>
-<%= @home %>
+
 </h1>
+<h2><%= "#{@age}" %></h2>
+<h4><%= "#{@home}" %></h4>
+<h4><%= link_to "Back to Pets", index_path%></h4>
