@@ -3,4 +3,11 @@ Rails.application.routes.draw do
   get '/', to: 'application#home'
   # ^receiving action ^^^controller
   get '/pets', to: 'application#index'
+  get '/dogs', to: 'application#dogs', as: 'dogs'
+  get '/cats', to: 'application#cats', as: 'cats'
+  get '/birds', to: 'application#birds', as: 'birds'
+  get '/dogs/:id', to: 'application#pet', as: 'dog'
+  get '/cats/:id', to: 'application#pet', as: 'cat'
+  get '/birds/:id', to: 'application#pet', as: 'bird'
+
 end

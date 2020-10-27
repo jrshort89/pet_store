@@ -1,5 +1,18 @@
 <h1>
-standard pet test
+<ul>
+    <% @pets.each do |pet| %>
+    
+    <li><%=link_to "#{pet.name} the #{pet.species.capitalize}",
 
-the pets are pets
+    case pet.species
+    when 'dog'
+    dog_path(pet.id)
+    when 'cat'
+    cat_path(pet.id)
+    when 'bird'
+    bird_path(pet.id)
+    end 
+    %>
+    <% end %>
+</ul>
 </h1>
